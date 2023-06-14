@@ -1,0 +1,105 @@
+body {
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #quoteContainer {
+    margin: 30px 0;
+  }
+  
+  #quote {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  #author {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  #generateBtn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    animation: buttonScale 0.3s ease-in-out;
+  }
+  
+  #generateBtn:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    transform: translateY(-100%);
+    z-index: -1;
+  }
+  
+  #generateBtn:hover {
+    background-color: #555;
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  #generateBtn:hover:before {
+    transform: translateY(0);
+  }
+  
+  @keyframes buttonScale {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  #snowfall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .snowflake {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: snowfall 5s linear infinite;
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+  
